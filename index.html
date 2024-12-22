@@ -3,27 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FreezyFlix - L'application ultime pour regarder des films en Full HD, avec une interface intuitive et des fonctionnalités avancées comme le mode hors ligne.">
+    <meta name="keywords" content="films, streaming, FreezyFlix, Full HD, application, téléchargement, mode hors ligne">
+    <meta name="author" content="FreezyFlix">
     <title>Téléchargez FreezyFlix</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(to bottom, #1e1e2f, #141419);
             color: white;
-            text-align: center;
         }
         header {
             background-color: #29293f;
-            padding: 20px;
+            padding: 20px 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff6347;
         }
         .content {
             padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px 0 10px;
         }
         .download-button {
             display: inline-block;
@@ -34,32 +57,48 @@
             text-decoration: none;
             font-size: 1.2em;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.2s;
         }
         .download-button:hover {
             background-color: #ff4500;
+            transform: scale(1.05);
         }
         .features {
-            margin-top: 30px;
+            margin-top: 40px;
+            text-align: left;
+            max-width: 800px;
+            margin: 40px auto;
         }
         .features h2 {
             font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .features ul {
             list-style: none;
             padding: 0;
         }
         .features li {
-            margin: 10px 0;
+            margin: 15px 0;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+        .features li::before {
+            content: '\2714';
+            color: #ff6347;
+            margin-right: 10px;
             font-size: 1.2em;
         }
         .discord {
             margin-top: 30px;
+            text-align: center;
         }
         .discord a {
             display: inline-block;
             margin-top: 10px;
-            padding: 10px;
+            padding: 10px 20px;
             background-color: #5865F2;
             color: white;
             text-decoration: none;
@@ -71,39 +110,66 @@
             background-color: #4752C4;
         }
         footer {
-            margin-top: 30px;
             background-color: #29293f;
-            padding: 10px 0;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
         }
         footer p {
-            margin: 0;
+            margin: 5px 0;
+        }
+        .social-icons {
+            margin: 10px 0;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ff6347;
         }
     </style>
 </head>
 <body>
     <header>
+        <nav>
+            <div><h1>FreezyFlix</h1></div>
+            <div>
+                <a href="#download">Téléchargement</a>
+                <a href="#features">Fonctionnalités</a>
+                <a href="#community">Communauté</a>
+            </div>
+        </nav>
+    </header>
+    <div id="download" class="content">
         <h1>Bienvenue sur FreezyFlix</h1>
         <p>Votre application ultime pour regarder des films à tout moment.</p>
-    </header>
-    <div class="content">
         <a href="https://mega.nz/folder/oPkyETBD#ro0mC3T-1Fej6Un6KLig4A" class="download-button">Téléchargez FreezyFlix maintenant</a>
-        <div class="features">
-            <h2>Fonctionnalités de FreezyFlix</h2>
-            <ul>
-                <li>Streaming Full HD rapide et fluide</li>
-                <li>Catalogue diversifié de films</li>
-                <li>Favoris et listes personnalisées</li>
-                <li>Mode hors ligne pour télécharger vos contenus</li>
-                <li>Interface conviviale et intuitive</li>
-            </ul>
-        </div>
-        <div class="discord">
-            <h2>Rejoignez notre communauté Discord</h2>
-            <a href="https://discord.com" target="_blank">Rejoindre le Discord</a>
-        </div>
+    </div>
+    <div id="features" class="features">
+        <h2>Fonctionnalités de FreezyFlix</h2>
+        <ul>
+            <li>Streaming Full HD rapide et fluide</li>
+            <li>Catalogue diversifié de films</li>
+            <li>Favoris et listes personnalisées</li>
+            <li>Mode hors ligne pour télécharger vos contenus</li>
+            <li>Interface conviviale et intuitive</li>
+        </ul>
+    </div>
+    <div id="community" class="discord">
+        <h2>Rejoignez notre communauté Discord</h2>
+        <a href="https://discord.com" target="_blank">Rejoindre le Discord</a>
     </div>
     <footer>
         <p>&copy; 2024 FreezyFlix. Tous droits réservés.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
 </body>
 </html>
